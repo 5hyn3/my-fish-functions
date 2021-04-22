@@ -11,7 +11,7 @@ function gh-cdp
     set -l current_branch (git rev-parse --abbrev-ref HEAD)
     git push --set-upstream origin $current_branch
   end
-  set gh_options -d -f -a 5hyn3 -t $_flag_title
+  set gh_options -d -f -a @me -t $_flag_title
   set -l git_root (git rev-parse --show-toplevel)
   if test -e $git_root/.github/pull_request_template.md
     set gh_options $gh_options -F $git_root/.github/pull_request_template.md
